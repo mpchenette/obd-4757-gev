@@ -78,3 +78,5 @@ Content-Type: application/json
    - Vision? arch diagram to terraform?
 4. Custom Instructions
    - show using to specify unit test framework
+5. Agent mode?
+   - run this for me? self-healing? python envs? ask it to add a gui interface?

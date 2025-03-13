@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from models import Task, db
 from services import TaskService
 
@@ -15,6 +15,11 @@ def create_tables():
     db.create_all()
 
 task_service = TaskService()
+
+# Root route to serve the HTML interface
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
 
 @app.route('/tasks', methods=['GET'])
 def get_tasks():
