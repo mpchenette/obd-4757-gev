@@ -18,7 +18,6 @@ task_service = TaskService()
 
 @app.route('/tasks', methods=['GET'])
 def get_tasks():
-    """Get all tasks or filter by status"""
     status = request.args.get('status')
     if status:
         tasks = task_service.get_tasks_by_status(status)
@@ -29,7 +28,6 @@ def get_tasks():
 
 @app.route('/tasks/<int:task_id>', methods=['GET'])
 def get_task(task_id):
-    """Get a specific task by ID"""
     task = task_service.get_task_by_id(task_id)
     if task:
         return jsonify(task.to_dict())
@@ -37,7 +35,6 @@ def get_task(task_id):
 
 @app.route('/tasks', methods=['POST'])
 def create_task():
-    """Create a new task"""
     data = request.get_json()
     if not data or 'title' not in data:
         return jsonify({'error': 'Title is required'}), 400
@@ -47,7 +44,6 @@ def create_task():
 
 @app.route('/tasks/<int:task_id>', methods=['PUT'])
 def update_task(task_id):
-    """Update an existing task"""
     data = request.get_json()
     task = task_service.update_task(task_id, data)
     
@@ -57,7 +53,6 @@ def update_task(task_id):
 
 @app.route('/tasks/<int:task_id>', methods=['DELETE'])
 def delete_task(task_id):
-    """Delete a task"""
     result = task_service.delete_task(task_id)
     if result:
         return jsonify({'message': 'Task deleted successfully'})

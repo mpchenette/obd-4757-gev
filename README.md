@@ -70,7 +70,7 @@ Content-Type: application/json
    - /tests
    - Copilot Edits
 2. Commenting / Documentation
-   - Edits to add comments
+   - Edits to add comments / docstrings
    - Create README
         - tell copilot to also add a desciption section, section on how to run and potential future improvements section
 3. Other Copilot Features

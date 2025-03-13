@@ -4,7 +4,6 @@ from datetime import datetime
 db = SQLAlchemy()
 
 class Task(db.Model):
-    """Task model for storing task related data"""
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
     description = db.Column(db.String(200), nullable=True)
@@ -14,7 +13,6 @@ class Task(db.Model):
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     def to_dict(self):
-        """Convert task object to dictionary"""
         return {
             'id': self.id,
             'title': self.title,
