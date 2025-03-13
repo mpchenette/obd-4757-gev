@@ -1,4 +1,6 @@
 flask==2.0.1
+werkzeug==2.0.1
+sqlalchemy==1.4.23
 flask-sqlalchemy==2.5.1
 pytest==6.2.5
 pytest-flask==1.2.0
