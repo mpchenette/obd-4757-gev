@@ -6,12 +6,13 @@
    - /tests
       - calculator.py
       - @workspace /tests (Sonnet)
-      - pytest tests/
+      - pytest tests/ <!-- (remove add max float if it appears) -->
    - General Chat info - context, / commands, etc
    - Agent Mode
       - now with no files (or even no directory!)
       - "can you write unit tests for all of my python files? (except for calculator!)"
-      - pytest tests/
+      - pytest tests/ <!-- let Agent mode iterate if needed -->
+      - Hope for some failures (no, seriously! so we can see agent mode in action)
 2. Commenting / Documentation
    - Copilot Edits
       - "add comments and docstrings to #file:services.py #file:app.py and #file:models.py"
@@ -27,7 +28,10 @@
       - "can you generate a terraform file based on this infra diagram"
 4. Custom Instructions
    - show using to specify unit test framework
-5. Agent mode?
+
+Unused
+---
+- Agent mode?
    - run this for me? self-healing? python envs?
    - takes more tokens, hits rate limits more frequently
    - but can run commands (with permission) and can see your whole codebase. No need to provide context!
