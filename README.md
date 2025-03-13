@@ -79,4 +79,4 @@ Content-Type: application/json
 4. Custom Instructions
    - show using to specify unit test framework
 5. Agent mode?
-   - run this for me? self-healing? python envs? ask it to add a gui interface?
+   - run this for me? self-healing? python envs?
