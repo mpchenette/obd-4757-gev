@@ -12,6 +12,13 @@ class Task(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
+    def __init__(self, **kwargs):
+        super(Task, self).__init__(**kwargs)
+        if not self.created_at:
+            self.created_at = datetime.utcnow()
+        if not self.updated_at:
+            self.updated_at = datetime.utcnow()
+
     def to_dict(self):
         return {
             'id': self.id,
