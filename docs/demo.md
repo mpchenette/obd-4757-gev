@@ -14,12 +14,17 @@
       - pytest tests/
 2. Commenting / Documentation
    - Copilot Edits
-      - "add comments and docstrings to all my python files"
-   - Create README
+      - "add comments and docstrings to #file:services.py #file:app.py and #file:models.py"
+   - Copilot Chat (or Agent Mode)
+      - Create README
+        - "@workspace can you create a readme based on my project (we can ignore calculator.py)"
         - tell copilot to also add a desciption section, section on how to run and potential future improvements section
+3. Explanation / Translation
 3. Other Copilot Features
    - Code Review(s)
-   - Vision? arch diagram to terraform?
+   - Vision
+      - drag + drop
+      - "can you generate a terraform file based on this infra diagram"
 4. Custom Instructions
    - show using to specify unit test framework
 5. Agent mode?
@@ -27,4 +32,4 @@
    - takes more tokens, hits rate limits more frequently
    - but can run commands (with permission) and can see your whole codebase. No need to provide context!
 
-   <!--    - PYTHONPATH=$PYTHONPATH:. pytest tests/ -->
+   <!-- PYTHONPATH=$PYTHONPATH:. pytest tests/ -->
