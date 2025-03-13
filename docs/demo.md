@@ -5,6 +5,8 @@
 1. Unit Test Generation
    - /tests
    - Copilot Edits
+   - PYTHONPATH=$PYTHONPATH:. pytest tests/
+   - pytest tests/
 2. Commenting / Documentation
    - Edits to add comments / docstrings
    - Create README
