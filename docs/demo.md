@@ -4,7 +4,11 @@
 ---
 1. Unit Test Generation
    - /tests
+      - calculator.py
+      - @workspace /tests (Sonnet)
+      - pytest /tests
    - Copilot Edits
+      - now with no files (or even no directory!)
    - PYTHONPATH=$PYTHONPATH:. pytest tests/
    - pytest tests/
 2. Commenting / Documentation
